@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpeakEase | 春の1ヶ月無料キャンペーン</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        :root {
+            --bg: #ffffff;
+            --surface: #ffffff;
+            --surface-soft: #ffffff;
+            --surface-dark: #ffffff;
+            --text: #1a1a1a;
+            --muted: #5e5e5e;
+            --accent: #9BCF53;
+            --accent-dark: #5FAF2D;
+            --line: #ddd3cd;
+            --success: #7a9a64;
+            --max: 1180px;
+            --radius: 24px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            letter-spacing: 0.02em;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(var(--max), calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        .site-header,
+        .site-footer {
+            height: 85px;
+            background: #333;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-inner,
+        .footer-inner {
+            width: 100%;
+            margin: 0;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 24px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .logo img {
+            display: block;
+            height: 57px;
+            width: auto;
+        }
+
+        .header-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            background: var(--accent);
+            color: #fff;
+            font-weight: 700;
+            transition: 0.25s ease;
+            white-space: nowrap;
+            margin-left: auto;
+        }
+
+        .header-cta:hover,
+        .main-cta:hover,
+        .banner-cta:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .top-split-banner {
+            height: 600px;
+            display: grid;
+            grid-template-columns: 1.3fr 0.9fr 1.3fr;
+            background: #333;
+            overflow: hidden;
+        }
+
+        .top-split-banner .banner-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .top-split-banner .banner-center {
+            display: grid;
+            place-content: center;
+            text-align: center;
+            padding: 36px;
+            gap: 14px;
+            color: #fff;
+            background: #333;
+        }
+
+        .top-split-banner .banner-center p {
+            margin: 0;
+            color: #eee;
+        }
+
+        .top-split-banner .banner-center h2 {
+            margin: 0;
+            font-size: clamp(2rem, 4vw, 3.4rem);
+            line-height: 1.2;
+            letter-spacing: 0.06em;
+        }
+
+        @media (min-width: 1025px) and (max-width: 1500px) {
+            .top-split-banner .banner-center h2 {
+                font-size: clamp(1.9rem, 3vw, 3rem);
+                white-space: nowrap;
+            }
+
+            .top-split-banner .banner-center p {
+                font-size: clamp(1rem, 1.2vw, 1.15rem);
+                white-space: nowrap;
+            }
+        }
+
+        .hero {
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-inner {
+            width: min(var(--max), calc(100% - 40px));
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .campaign-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(182, 121, 82, 0.25);
+            color: var(--accent-dark);
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            margin: 0 0 18px;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            line-height: 1.2;
+            letter-spacing: 0.03em;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero-lead {
+            font-size: 1.1rem;
+            color: var(--muted);
+            margin-bottom: 28px;
+            max-width: 40em;
+        }
+
+        .hero-points {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+
+        .hero-points span {
+            padding: 10px 14px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid var(--line);
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+        .cta-row {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .main-cta,
+        .banner-cta {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 56px;
+            padding: 0 28px;
+            background: var(--accent-dark);
+            color: #fff;
+            font-weight: 700;
+            transition: 0.25s ease;
+        }
+
+        .sub-note {
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .hero-card {
+            background: #f7d6bd;
+            border: 1px solid #f7d6bd;
+            padding: 32px;
+        }
+
+        .hero-card h2 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 1.25rem;
+        }
+
+        .price-box {
+            padding: 22px;
+            background: var(--accent-dark);
+            border: 1px solid #d9cec6;
+            margin-bottom: 16px;
+        }
+
+        .price-box .label {
+            display: block;
+            font-size: 0.9rem;
+            color: #d8d8d8;
+            margin-bottom: 8px;
+        }
+
+        .price-box strong {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: #fff;
+            line-height: 1;
+        }
+
+        .hero-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 18px 0 0;
+        }
+
+        .hero-card li {
+            padding-left: 1.6em;
+            position: relative;
+            margin-bottom: 10px;
+            color: var(--muted);
+        }
+
+        .hero-card li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: 700;
+        }
+
+        .section {
+            padding: 46px 0 64px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            margin-bottom: 10px;
+            color: var(--accent);
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            font-size: 0.9rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(1.7rem, 3vw, 2.4rem);
+            margin: 0 0 40px;
+        }
+
+        .intro-visual {
+            width: min(1180px, 100%);
+            min-height: auto;
+            display: grid;
+            grid-template-rows: auto auto;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .intro-visual img {
+            width: 100%;
+            height: 460px;
+            object-fit: cover;
+        }
+
+        .intro-copy {
+            position: static;
+            background: rgba(255, 255, 255, 0.88);
+            padding: 26px;
+            max-width: 860px;
+            margin: 0 auto;
+            backdrop-filter: blur(8px);
+        }
+
+        .feature-section {
+            background: #333;
+            padding: 72px 0 80px;
+        }
+
+        .feature-section .section-title {
+            color: #fff;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 34px;
+            margin-bottom: 40px;
+        }
+
+        .feature-card {
+            background: var(--surface-soft);
+            padding: 28px;
+            min-height: 350px;
+        }
+
+        .feature-icon {
+            width: 100%;
+            display: grid;
+            place-items: center;
+            margin: 0 auto 22px;
+        }
+
+        .feature-icon .material-symbols-outlined {
+            font-size: 160px;
+            line-height: 1;
+            color: #333;
+            font-variation-settings:
+                "FILL" 0,
+                "wght" 250,
+                "GRAD" 0,
+                "opsz" 24;
+        }
+
+        .feature-card h3 {
+            margin: 0 0 12px;
+            font-size: 1.3rem;
+        }
+
+        .feature-card p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .campaign-banner {
+            position: relative;
+            background: #fff;
+            margin: 2em auto;
+            padding: 0;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 220px;
+            align-items: stretch;
+            gap: 0;
+            overflow: hidden;
+            border: 1px solid #d9cec6;
+            max-width: 800px;
+        }
+
+        .campaign-banner::before,
+        .campaign-banner::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 28px;
+            height: 28px;
+            background: #d7d3d0;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+
+        .campaign-banner::before {
+            display: none;
+        }
+
+        .campaign-banner::after {
+            right: -14px;
+        }
+
+        .campaign-banner-main {
+            position: relative;
+            padding: 2em;
+            background:
+                linear-gradient(0deg, transparent 19px, #d3d3d3 20px),
+                linear-gradient(90deg, transparent 19px, #d3d3d3 20px),
+                #fff;
+            background-size: 20px 20px;
+        }
+
+        .campaign-banner-main::after {
+            content: "";
+            position: absolute;
+            top: 18px;
+            bottom: 18px;
+            right: 0;
+            width: 1px;
+            background-image: linear-gradient(to bottom, #b67952 55%, transparent 0%);
+            background-size: 1px 10px;
+            background-repeat: repeat-y;
+            opacity: 0.55;
+        }
+
+        .campaign-kicker {
+            display: inline-block;
+            margin-bottom: 10px;
+            font-size: 0.82rem;
+            font-weight: 800;
+            letter-spacing: 0.18em;
+            color: var(--accent-dark);
+        }
+
+        .campaign-banner h3 {
+            margin: 0 0 10px;
+            font-size: clamp(1.7rem, 3vw, 2.6rem);
+            line-height: 1.2;
+        }
+
+        .campaign-date {
+            margin: 0 0 4px;
+            font-size: 1rem;
+            color: var(--text);
+            font-weight: 500;
+        }
+
+        .campaign-banner p {
+            margin: 0;
+        }
+
+        .apply-soon {
+            margin: 40px auto 0;
+            text-align: center;
+        }
+
+        .apply-soon+.campaign-banner {
+            margin-top: 0;
+        }
+
+        .campaign-banner-side {
+            background: var(--accent-dark);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100%;
+            padding: 20px 12px;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            letter-spacing: 0.18em;
+            font-size: 0.82rem;
+            font-weight: 700;
+        }
+
+        .voices {
+            position: relative;
+            display: grid;
+            grid-template-columns: 56px minmax(0, 1fr) 56px;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .arrow {
+            width: auto;
+            height: auto;
+            border: 0;
+            display: block;
+            text-align: center;
+            color: #333;
+            font-size: 2rem;
+            line-height: 1;
+            background: transparent;
+        }
+
+        .voice-slider {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .voice-track {
+            display: flex;
+            transition: transform 0.5s ease;
+            will-change: transform;
+        }
+
+        .voice-card {
+            background: transparent;
+            border: 1px solid var(--line);
+            padding: 38px;
+            min-width: 100%;
+            flex: 0 0 100%;
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 34px;
+            align-items: center;
+        }
+
+        .voice-dots {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: none;
+            background: #bdb7b3;
+            cursor: pointer;
+            padding: 0;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .dot.active {
+            background: #333;
+            transform: scale(1.15);
+        }
+
+        .avatar {
+            width: 240px;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .voice-role {
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .voice-card h3 {
+            margin: 0 0 10px;
+            font-size: 1.5rem;
+        }
+
+        .voice-card p {
+            margin: 0;
+            color: var(--text);
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: minmax(0, 280px) auto minmax(0, 280px) auto minmax(0, 280px);
+            column-gap: 14px;
+            row-gap: 20px;
+            justify-content: center;
+            align-items: start;
+            margin-top: 22px;
+        }
+
+        .step {
+            text-align: center;
+            border: 1px solid var(--line);
+            padding: 20px 18px;
+        }
+
+        .step-separator {
+            align-self: center;
+            justify-self: center;
+            color: #333;
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+        .step-circle {
+            width: auto;
+            aspect-ratio: auto;
+            margin: 0 auto 22px;
+            display: grid;
+            place-items: center;
+            padding: 0;
+        }
+
+        .step-circle span {
+            display: inline-grid;
+            place-items: center;
+            width: 64px;
+            height: 64px;
+            background: var(--accent);
+            color: #fff;
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+
+        .step h3 {
+            margin: 0 0 10px;
+            font-size: 1.2rem;
+        }
+
+        .step p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .apply-heading {
+            text-align: center;
+            margin: 72px 0 28px;
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 800;
+        }
+
+        .footer-inner {
+            color: var(--muted);
+            font-size: 0.95rem;
+            justify-content: center;
+            text-align: center;
+        }
+
+        @media (max-width: 1024px) {
+
+            .hero-inner,
+            .features,
+            .steps,
+            .voice-card {
+                grid-template-columns: 1fr;
+            }
+
+            .step-separator {
+                display: none;
+            }
+
+            .hero {
+                padding: 64px 0;
+            }
+
+            .top-split-banner {
+                height: auto;
+                grid-template-columns: 1fr;
+            }
+
+            .top-split-banner .banner-image {
+                height: 220px;
+            }
+
+            .top-split-banner .banner-center {
+                min-height: 280px;
+            }
+
+            .intro-visual {
+                min-height: 520px;
+            }
+
+            .voice-card {
+                justify-items: center;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .container,
+            .header-inner,
+            .footer-inner,
+            .hero-inner {
+                width: min(var(--max), calc(100% - 24px));
+            }
+
+            .header-inner,
+            .footer-inner {
+                padding: 0 12px;
+            }
+
+            .site-header,
+            .site-footer {
+                height: auto;
+                padding: 16px 0;
+            }
+
+            .header-inner {
+                flex-direction: row;
+                flex-wrap: nowrap;
+                gap: 12px;
+            }
+
+            .logo img {
+                height: 44px;
+            }
+
+            .header-cta {
+                padding: 10px 14px;
+                font-size: 0.86rem;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .top-split-banner .banner-image {
+                height: 180px;
+            }
+
+            .top-split-banner .banner-center {
+                min-height: 240px;
+                padding: 24px;
+            }
+
+            .intro-copy,
+            .campaign-banner-main,
+            .hero-card,
+            .voice-card,
+            .feature-card {
+                padding: 22px;
+            }
+
+            .intro-copy {
+                position: static;
+                max-width: none;
+            }
+
+            .intro-visual {
+                min-height: auto;
+                display: grid;
+            }
+
+            .intro-visual img {
+                height: auto;
+            }
+
+            .voices {
+                grid-template-columns: 28px minmax(0, 1fr) 28px;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .voice-card {
+                grid-template-columns: 1fr;
+                padding: 22px;
+                text-align: center;
+            }
+
+            .arrow {
+                width: auto;
+                height: auto;
+                font-size: 1.4rem;
+            }
+
+            .avatar {
+                width: 180px;
+                height: 180px;
+            }
+
+            .campaign-banner {
+                grid-template-columns: 1fr;
+            }
+
+            .campaign-banner::before,
+            .campaign-banner::after {
+                display: none;
+            }
+
+            .campaign-banner-main::after {
+                display: none;
+            }
+
+            .campaign-banner-side {
+                writing-mode: horizontal-tb;
+                letter-spacing: 0.12em;
+                justify-content: center;
+                min-height: 56px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo"><img src="image/Logo.png" alt="SpeakEase logo"></div>
+            <a class="header-cta" href="#apply">特別オファーに申し込む</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="top-split-banner" aria-label="メインバナー">
+            <div class="banner-image">
+                <img src="image/Gemini_women_1.png" alt="英会話レッスンイメージ" />
+            </div>
+            <div class="banner-center">
+                <p>SPECIAL OFFER</p>
+                <h2>初月受講料<br>1ヶ月無料</h2>
+                <p>キャンペーン期間<br>2026年4月1日〜5月31日</p>
+            </div>
+            <div class="banner-image">
+                <img src="image/Gemini_men_1.png" alt="英会話レッスンイメージ" />
+            </div>
+        </section>
+
+        <section class="hero">
+            <div class="hero-inner">
+                <div>
+                    <h1>忙しい社会人のための<br><span>オンライン英会話</span>を、
+                        今だけ1ヶ月無料で。</h1>
+                    <p class="hero-lead">
+                        SpeakEaseは、仕事で英語が必要になった方や、将来のキャリアアップを目指す社会人のためのオンライン英会話スクールです。
+                        朝活・通勤前・仕事後のすきま時間でも続けやすい設計で、実践的な会話力を無理なく伸ばせます。
+                    </p>
+                    <div class="hero-points">
+                        <span>ビジネス英語対応</span>
+                        <span>朝7時〜夜23時まで受講可能</span>
+                        <span>スマホで完結</span>
+                    </div>
+                    <div class="cta-row">
+                        <a class="main-cta" href="#apply">今すぐ申し込む</a>
+                        <div class="sub-note">※ 対象期間中のお申し込みで初月受講料が無料</div>
+                    </div>
+                </div>
+
+                <aside class="hero-card">
+                    <h2>キャンペーン概要</h2>
+                    <div class="price-box">
+                        <span class="label">春の限定特典</span>
+                        <strong>1ヶ月無料</strong>
+                    </div>
+                    <ul>
+                        <li>申込期間：2026年4月1日（水）〜5月31日（日）</li>
+                        <li>対象：新規でお申し込みの社会人の方</li>
+                        <li>内容：受講料1ヶ月分が無料</li>
+                        <li>無料体験レッスン後、そのまま本申込可能</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="intro-visual">
+                    <img src="image/Gemini_work.png" alt="オンライン英会話を受講する社会人" />
+                    <div class="intro-copy">
+                        <span class="eyebrow">FOR WORKING PROFESSIONALS</span>
+                        <h2>英語学習を、仕事と両立しやすく。</h2>
+                        <p>
+                            SpeakEaseは、会議・プレゼン・メール・海外出張など、
+                            仕事の現場で役立つ英語力を身につけることを重視しています。朝7時〜夜23時まで受講可能で、6時間前までの予約変更も可能。短時間でも成果を感じやすいレッスン設計だから、継続が苦手な方にもおすすめです。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="feature-section">
+            <div class="container">
+                <h2 class="section-title">3つの特長</h2>
+                <div class="features">
+                    <article class="feature-card">
+                        <div class="feature-icon"><span class="material-symbols-outlined">work</span></div>
+                        <h3>社会人向けカリキュラム</h3>
+                        <p>
+                            会議、自己紹介、商談、海外クライアント対応など、ビジネスの場面でそのまま使いやすい表現を重点的に学べます。
+                        </p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon"><span class="material-symbols-outlined">schedule</span></div>
+                        <h3>忙しくても続けやすい</h3>
+                        <p>
+                            1回25分から受講可能。出勤前や昼休み、帰宅後など、ライフスタイルに合わせて柔軟にレッスンを組めます。
+                        </p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon"><span class="material-symbols-outlined">person_celebrate</span></div>
+                        <h3>実践重視のマンツーマン</h3>
+                        <p>
+                            一人ひとりの目的に合わせて講師がレッスンを調整。話す時間をしっかり確保し、実践的なアウトプットを増やせます。
+                        </p>
+                    </article>
+                </div>
+
+                <div class="campaign-banner">
+                    <div class="campaign-banner-main">
+                        <div class="campaign-kicker">SPECIAL OFFER</div>
+                        <h3>初月受講料 1ヶ月無料</h3>
+                        <div class="campaign-date">キャンペーン期間：2026年4月1日〜5月31日</div>
+                        <p>社会人の英語学習スタートを応援します！</p>
+                    </div>
+                    <a class="campaign-banner-side" href="#apply">ENTRY</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">利用者の声</h2>
+
+                <div class="voices">
+                    <button class="arrow prev" aria-label="前の声を見る">‹</button>
+
+                    <div class="voice-slider">
+                        <div class="voice-track">
+                            <article class="voice-card">
+                                <img class="avatar" src="image/Gemini_JP_men.png" alt="利用者の写真" />
+                                <div>
+                                    <div class="voice-role">メーカー勤務・32歳</div>
+                                    <h3>「会議で発言するハードルが下がりました」</h3>
+                                    <p>
+                                        仕事で急に英語ミーティングが増え、焦って受講を開始しました。SpeakEaseはビジネスシーンを想定した会話練習が多く、
+                                        実際の会議で使えるフレーズがすぐ身につきました。夜遅くでも受講できるので、忙しい時期でも続けやすいです。
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="voice-card">
+                                <img class="avatar" src="image/Gemini_JP_women.png" alt="利用者の写真" />
+                                <div>
+                                    <div class="voice-role">外資系商社勤務・45歳</div>
+                                    <h3>「英語での商談にも自信が持てるようになりました」</h3>
+                                    <p>
+                                        仕事で海外クライアントとの商談が増え、思うように話せず不安を感じて受講を始めました。SpeakEaseは実際の商談を想定した会話練習が多く、提案や交渉で使える表現が自然と身につきました。外勤でスケジュールが不規則でも、移動の合間や帰宅後に受講できるので無理なく続けられています。
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <button class="arrow next" aria-label="次の声を見る">›</button>
+                </div>
+
+                <div class="voice-dots" aria-label="スライド位置">
+                    <button class="dot active" aria-label="1枚目を表示"></button>
+                    <button class="dot" aria-label="2枚目を表示"></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="apply">
+            <div class="container">
+                <h2 class="section-title">お申込みの流れ</h2>
+                <div class="steps">
+                    <article class="step">
+                        <div class="step-circle">
+                            <div>
+                                <span>1</span>
+                                <strong>無料体験を予約</strong>
+                            </div>
+                        </div>
+                        <p>ご希望の日時を選ぶだけで、無料体験レッスンの予約が完了します。</p>
+                    </article>
+                    <div class="step-separator">></div>
+
+                    <article class="step">
+                        <div class="step-circle">
+                            <div>
+                                <span>2</span>
+                                <strong>レベル診断</strong>
+                            </div>
+                        </div>
+                        <p>英語力と学習目的を確認し、仕事に活かせる最適な受講プランをご案内します。</p>
+                    </article>
+                    <div class="step-separator">></div>
+
+                    <article class="step">
+                        <div class="step-circle">
+                            <div>
+                                <span>3</span>
+                                <strong>入会手続き</strong>
+                            </div>
+                        </div>
+                        <p>期間中のお申込みなら、初月の受講料が無料。英会話レッスンをおトクに始められます。</p>
+                    </article>
+                </div>
+
+                <p class="apply-soon">＼お申込みはお早めに！／</p>
+
+                <div class="campaign-banner">
+                    <div class="campaign-banner-main">
+                        <div class="campaign-kicker">SPECIAL OFFER</div>
+                        <h3>初月受講料 1ヶ月無料</h3>
+                        <div class="campaign-date">キャンペーン期間：2026年4月1日〜5月31日</div>
+                        <p>社会人の英語学習スタートを応援します！</p>
+                    </div>
+                    <a class="campaign-banner-side"
+                        href="mailto:entry@speakease.jp?subject=SpeakEase%20campaign%20entry">ENTRY</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>© 2026 SpeakEase</div>
+        </div>
+    </footer>
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const track = document.querySelector(".voice-track");
+        const slides = document.querySelectorAll(".voice-card");
+        const prevBtn = document.querySelector(".arrow.prev");
+        const nextBtn = document.querySelector(".arrow.next");
+        const dots = document.querySelectorAll(".dot");
+
+        let currentIndex = 0;
+        let autoSlide;
+
+        function updateSlider() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+            dots.forEach((dot, index) => {
+                dot.classList.toggle("active", index === currentIndex);
+            });
+        }
+
+        function goToNext() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlider();
+        }
+
+        function goToPrev() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlider();
+        }
+
+        function startAutoSlide() {
+            autoSlide = setInterval(() => {
+                goToNext();
+            }, 5000);
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlide);
+            startAutoSlide();
+        }
+
+        nextBtn.addEventListener("click", () => {
+            goToNext();
+            resetAutoSlide();
+        });
+
+        prevBtn.addEventListener("click", () => {
+            goToPrev();
+            resetAutoSlide();
+        });
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener("click", () => {
+                currentIndex = index;
+                updateSlider();
+                resetAutoSlide();
+            });
+        });
+
+        updateSlider();
+        startAutoSlide();
+    });
+</script>
+
+</html>
